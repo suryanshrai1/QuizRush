@@ -21,12 +21,13 @@ const Quiz = ({ questions, onQuit }) => {
     <div className="p-6 bg-gray-100 min-h-screen">
       <h2 className="text-2xl font-bold mb-4 text-indigo-700">Question {currentIndex + 1}</h2>
       <p className="mb-6 text-lg">{current.question}</p>
+      
       <div className="space-y-4 mb-6">
         {current.options.map((opt, i) => (
           <button
             key={i}
             onClick={() => setSelected(opt)}
-            className={`w-full px-4 py-2 rounded border text-left ${
+            className={`w-full px-4 py-2 rounded border text-left cursor-pointer ${
               selected === opt ? 'bg-indigo-200 border-indigo-500' : 'bg-white border-gray-300'
             }`}
           >
@@ -34,16 +35,22 @@ const Quiz = ({ questions, onQuit }) => {
           </button>
         ))}
       </div>
+
       <button
         onClick={handleNext}
-        className="px-6 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700"
         disabled={!selected}
+        className={`px-6 py-2 rounded text-white transition ${
+          selected
+            ? 'bg-indigo-600 hover:bg-indigo-700 cursor-pointer'
+            : 'bg-gray-400 cursor-not-allowed'
+        }`}
       >
         {currentIndex + 1 < questions.length ? 'Next' : 'Finish'}
       </button>
+
       <button
         onClick={onQuit}
-        className="ml-4 px-6 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+        className="ml-4 px-6 py-2 bg-red-500 text-white rounded hover:bg-red-600 cursor-pointer"
       >
         Quit
       </button>

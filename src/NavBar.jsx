@@ -16,7 +16,7 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#about" className="hover:text-indigo-300 transition">
+          <a href="#about" className="hover:text-indigo-300 transition cursor-pointer">
             About
           </a>
         </li>
