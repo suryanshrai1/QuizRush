@@ -10,11 +10,12 @@ const QuizCard = ({ quiz, onStart }) => {
         <span>Difficulty: {quiz.difficulty}</span>
       </div>
       <button
-        className="w-full px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition"
+        className="w-full px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition cursor-pointer"
         onClick={() => onStart(quiz.id)}
       >
         Start Quiz
       </button>
+
     </div>
   );
 };

@@ -16,6 +16,11 @@ function App() {
     setActiveQuizId(quizId);
   };
 
+  const startRandomQuiz = () => {
+    const randomQuiz = quizzes[Math.floor(Math.random() * quizzes.length)];
+    setActiveQuizId(randomQuiz.id);
+  };
+
   const quitQuiz = () => {
     setActiveQuizId(null);
   };
@@ -31,7 +36,7 @@ function App() {
 
           {/* 🔽 Home Section Anchor */}
           <div id="home">
-            <Home />
+            <Home onStart={startRandomQuiz} /> {/* ← Hooked up! */}
           </div>
 
           {/* 🔽 Quizzes Section Anchor */}
@@ -42,7 +47,7 @@ function App() {
           {/* 🔽 About Section Anchor */}
           <div id="about" className="p-6 text-center bg-gray-100 text-gray-700">
             <h2 className="text-2xl font-semibold mb-2">About QuizApp</h2>
-            <p>This is a quiz app built with React and Tailwind CSS.</p>
+            <p>This is a simple quiz app built with React and Tailwind CSS.</p>
           </div>
         </>
       ) : (
