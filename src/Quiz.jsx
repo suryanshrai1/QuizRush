@@ -5,6 +5,8 @@ const Quiz = ({ questions, onQuit }) => {
   const [score, setScore] = useState(0);
   const [selected, setSelected] = useState(null);
   const [showAnswer, setShowAnswer] = useState(false);
+  const [isFinished, setIsFinished] = useState(false);
+
   const current = questions[currentIndex];
 
   const handleSelect = (option) => {
@@ -23,9 +25,16 @@ const Quiz = ({ questions, onQuit }) => {
     if (currentIndex + 1 < questions.length) {
       setCurrentIndex(currentIndex + 1);
     } else {
-      alert(`Quiz Finished! You scored ${score} out of ${questions.length}`);
-      onQuit();
+      setIsFinished(true);
     }
+  };
+
+  const handleRestart = () => {
+    setCurrentIndex(0);
+    setScore(0);
+    setSelected(null);
+    setShowAnswer(false);
+    setIsFinished(false);
   };
 
   const getOptionClass = (option) => {
@@ -40,6 +49,32 @@ const Quiz = ({ questions, onQuit }) => {
     }
     return 'bg-white border-gray-300 opacity-50'; // dim unselected options after answer shown
   };
+
+  if (isFinished) {
+    return (
+      <div className="p-6 bg-gray-100 min-h-screen flex flex-col justify-center items-center max-w-xl mx-auto">
+        <h2 className="text-3xl font-bold text-indigo-700 mb-6">Quiz Finished!</h2>
+        <p className="text-xl mb-6">
+          You scored <span className="font-semibold">{score}</span> out of{' '}
+          <span className="font-semibold">{questions.length}</span>
+        </p>
+        <div className="space-x-4">
+          <button
+            onClick={handleRestart}
+            className="px-6 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition cursor-pointer"
+          >
+            Restart Quiz
+          </button>
+          <button
+            onClick={onQuit}
+            className="px-6 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition cursor-pointer"
+          >
+            Quit
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="p-6 bg-gray-100 min-h-screen max-w-xl mx-auto">
