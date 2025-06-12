@@ -53,7 +53,8 @@ const Quiz = ({ questions, onQuit, userName }) => {
           You scored <span className="font-semibold">{score}</span> out of{' '}
           <span className="font-semibold">{questions.length}</span>
         </p>
-        <div className="space-x-4">
+
+        <div className="space-x-4 mb-4">
           <button
             onClick={handleRestart}
             className="px-6 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition cursor-pointer"
@@ -67,6 +68,21 @@ const Quiz = ({ questions, onQuit, userName }) => {
             Quit
           </button>
         </div>
+
+        <button
+          onClick={() => {
+            onQuit(score);
+            setTimeout(() => {
+              const leaderboardSection = document.getElementById('leaderboard');
+              if (leaderboardSection) {
+                leaderboardSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }, 100); // Wait to exit quiz view
+          }}
+          className="mt-2 px-6 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition cursor-pointer"
+        >
+          View Leaderboard
+        </button>
       </div>
     );
   }
@@ -91,24 +107,25 @@ const Quiz = ({ questions, onQuit, userName }) => {
         ))}
       </div>
 
-      <button
-        onClick={handleNext}
-        disabled={!showAnswer}
-        className={`px-6 py-2 rounded text-white transition ${
-          showAnswer
-            ? 'bg-indigo-600 hover:bg-indigo-700 cursor-pointer'
-            : 'bg-gray-400 cursor-not-allowed'
-        }`}
-      >
-        {currentIndex + 1 < questions.length ? 'Next' : 'Finish'}
-      </button>
+      <div className="flex flex-wrap gap-4">
+        <button
+          onClick={handleNext}
+          disabled={!showAnswer}
+          className={`px-6 py-2 rounded text-white transition ${showAnswer
+              ? 'bg-indigo-600 hover:bg-indigo-700 cursor-pointer'
+              : 'bg-gray-400 cursor-not-allowed'
+            }`}
+        >
+          {currentIndex + 1 < questions.length ? 'Next' : 'Finish'}
+        </button>
 
-      <button
-        onClick={() => onQuit(score)}
-        className="ml-4 px-6 py-2 bg-red-500 text-white rounded hover:bg-red-600 cursor-pointer"
-      >
-        Quit
-      </button>
+        <button
+          onClick={() => onQuit(score)}
+          className="px-6 py-2 bg-red-500 text-white rounded hover:bg-red-600 cursor-pointer"
+        >
+          Quit
+        </button>
+      </div>
     </div>
   );
 };
