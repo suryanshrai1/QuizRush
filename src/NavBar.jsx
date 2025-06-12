@@ -16,12 +16,16 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#about" className="hover:text-indigo-300 transition cursor-pointer">
+          <a href="#about" className="hover:text-indigo-300 transition">
             About
           </a>
         </li>
+        <li>
+          <a href="#leaderboard" className="hover:text-indigo-300 transition">
+            Leaderboard
+          </a>
+        </li>
       </ul>
-      {/* Mobile menu button (optional, you can implement if needed) */}
     </nav>
   );
 };

@@ -10,7 +10,7 @@ const Quiz = ({ questions, onQuit, userName }) => {
   const current = questions[currentIndex];
 
   const handleSelect = (option) => {
-    if (showAnswer) return; // prevent changing selection after answer shown
+    if (showAnswer) return;
     setSelected(option);
     setShowAnswer(true);
 
@@ -38,16 +38,10 @@ const Quiz = ({ questions, onQuit, userName }) => {
   };
 
   const getOptionClass = (option) => {
-    if (!showAnswer) {
-      return 'bg-white border-gray-300';
-    }
-    if (option === current.answer) {
-      return 'bg-green-200 border-green-500';
-    }
-    if (option === selected && option !== current.answer) {
-      return 'bg-red-200 border-red-500';
-    }
-    return 'bg-white border-gray-300 opacity-50'; // dim unselected options after answer shown
+    if (!showAnswer) return 'bg-white border-gray-300';
+    if (option === current.answer) return 'bg-green-200 border-green-500';
+    if (option === selected && option !== current.answer) return 'bg-red-200 border-red-500';
+    return 'bg-white border-gray-300 opacity-50';
   };
 
   if (isFinished) {
@@ -67,7 +61,7 @@ const Quiz = ({ questions, onQuit, userName }) => {
             Restart Quiz
           </button>
           <button
-            onClick={onQuit}
+            onClick={() => onQuit(score)}
             className="px-6 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition cursor-pointer"
           >
             Quit
@@ -110,7 +104,7 @@ const Quiz = ({ questions, onQuit, userName }) => {
       </button>
 
       <button
-        onClick={onQuit}
+        onClick={() => onQuit(score)}
         className="ml-4 px-6 py-2 bg-red-500 text-white rounded hover:bg-red-600 cursor-pointer"
       >
         Quit
