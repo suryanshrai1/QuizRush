@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Quiz = ({ questions, onQuit }) => {
+const Quiz = ({ questions, onQuit, userName }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [selected, setSelected] = useState(null);
@@ -54,7 +54,8 @@ const Quiz = ({ questions, onQuit }) => {
     return (
       <div className="p-6 bg-gray-100 min-h-screen flex flex-col justify-center items-center max-w-xl mx-auto">
         <h2 className="text-3xl font-bold text-indigo-700 mb-6">Quiz Finished!</h2>
-        <p className="text-xl mb-6">
+        <p className="text-xl mb-6 text-center">
+          {userName && <span className="block mb-2 font-medium">Well done, {userName}!</span>}
           You scored <span className="font-semibold">{score}</span> out of{' '}
           <span className="font-semibold">{questions.length}</span>
         </p>
@@ -79,7 +80,7 @@ const Quiz = ({ questions, onQuit }) => {
   return (
     <div className="p-6 bg-gray-100 min-h-screen max-w-xl mx-auto">
       <h2 className="text-2xl font-bold mb-4 text-indigo-700">
-        Question {currentIndex + 1}
+        {userName ? `Hi ${userName}, here’s your question:` : `Question ${currentIndex + 1}`}
       </h2>
       <p className="mb-6 text-lg">{current.question}</p>
 

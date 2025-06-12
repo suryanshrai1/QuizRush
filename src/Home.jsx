@@ -13,7 +13,7 @@ const Home = ({ onStart }) => {
         onClick={onStart}
         className="px-8 py-3 bg-white text-indigo-600 font-semibold rounded-lg shadow-lg hover:bg-indigo-100 transition cursor-pointer"
       >
-        Start Quiz
+        Start A Random Quiz
       </button>
 
     </div>

@@ -21,6 +21,20 @@ const quizzes = [
     category: 'History',
     difficulty: 'Hard',
   },
+    {
+    id: 4,
+    title: 'Current Affairs',
+    description: 'Knowlwdge of what is happening around the world.',
+    category: 'Current Affairs',
+    difficulty: 'Medium',
+  },
+   {
+    id: 5,
+    title: 'JAVA',
+    description: 'Test your knowledge of JAVA.',
+    category: 'Programming',
+    difficulty: 'Medium',
+  },
 ];
 
 export default quizzes;
