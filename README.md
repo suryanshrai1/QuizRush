@@ -2,8 +2,7 @@
 
 **QuizRush** is a responsive, interactive quiz application built with **React** and styled using **Tailwind CSS**. It allows users to test their knowledge across a variety of topics, view their scores, and compete on a leaderboard.
 
-![QuizRush Banner](![image](https://github.com/user-attachments/assets/4ffea605-e15c-4c19-a713-a1dc01422f60)
-) 
+![QuizRush Banner](![image](https://github.com/user-attachments/assets/4ffea605-e15c-4c19-a713-a1dc01422f60) 
 
 ---
 
@@ -82,12 +81,9 @@ This will start the app on http://localhost:5173 (if using Vite) or http://local
 
 ### 📷 Screenshots
 
-| Home Page                                    | Quiz Page                                    | Leaderboard                                         |
-| -------------------------------------------- | -------------------------------------------- | --------------------------------------------------- |
-| ![Home](![image](https://github.com/user-attachments/assets/4d21b521-e871-4576-a1ea-fd93eefedf3e)
-) | ![Quiz](![image](![image](https://github.com/user-attachments/assets/9226c2cd-966c-4a37-8af1-30615b1e47e9)
-)
-) | ![Leaderboard](![image](https://github.com/user-attachments/assets/abfdbb0e-c50a-4489-bfb4-21bd534e7a39)) |
+| Home Page | Quiz Page | Leaderboard |
+|-----------|-----------|-------------|
+| ![Home Page](https://github.com/user-attachments/assets/4d21b521-e871-4576-a1ea-fd93eefedf3e) | ![Quiz Page](https://github.com/user-attachments/assets/9226c2cd-966c-4a37-8af1-30615b1e47e9) | ![Leaderboard](https://github.com/user-attachments/assets/abfdbb0e-c50a-4489-bfb4-21bd534e7a39) |
 
 ### 🧾 About
 Made with ❤️ by Suryansh Rai
