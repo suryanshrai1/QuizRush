@@ -2,7 +2,8 @@
 
 **QuizRush** is a responsive, interactive quiz application built with **React** and styled using **Tailwind CSS**. It allows users to test their knowledge across a variety of topics, view their scores, and compete on a leaderboard.
 
-![QuizRush Banner](https://via.placeholder.com/1000x300?text=QuizRush+Quiz+App) 
+![QuizRush Banner](![image](https://github.com/user-attachments/assets/4ffea605-e15c-4c19-a713-a1dc01422f60)
+) 
 
 ---
 
@@ -28,30 +29,31 @@
 
 ## 📂 Folder Structure
 
+<details> <summary><strong>📁 Project Structure</strong> (Click to expand)</summary>
 QuizRush/
 ├── public/
 ├── src/
-│ ├── components/
-│ │ ├── Header.js
-│ │ ├── Footer.js
-│ │ ├── Navbar.js
-│ │ ├── Quiz.js
-│ │ ├── QuizList.js
-│ │ ├── QuizCard.js
-│ │ ├── Home.js
-│ │ ├── NameModal.js
-│ │ └── Leaderboard.js
-│ ├── data/
-│ │ ├── quizzes.js
-│ │ └── questions.js
-│ ├── App.js
-│ ├── App.css
-│ └── index.js
+│   ├── components/
+│   │   ├── Footer.js
+│   │   ├── Header.js
+│   │   ├── Home.js
+│   │   ├── Leaderboard.js
+│   │   ├── NameModal.js
+│   │   ├── Navbar.js
+│   │   ├── Quiz.js
+│   │   ├── QuizCard.js
+│   │   └── QuizList.js
+│   ├── data/
+│   │   ├── questions.js
+│   │   └── quizzes.js
+│   ├── App.css
+│   ├── App.js
+│   └── index.js
 ├── tailwind.config.js
 ├── postcss.config.js
 ├── package.json
 └── README.md
-
+</details>
 
 ---
 
@@ -78,7 +80,11 @@ This will start the app on http://localhost:5173 (if using Vite) or http://local
 
 | Home Page                                    | Quiz Page                                    | Leaderboard                                         |
 | -------------------------------------------- | -------------------------------------------- | --------------------------------------------------- |
-| ![Home](https://via.placeholder.com/300x200) | ![Quiz](https://via.placeholder.com/300x200) | ![Leaderboard](https://via.placeholder.com/300x200) |
+| ![Home](![image](https://github.com/user-attachments/assets/4d21b521-e871-4576-a1ea-fd93eefedf3e/300x200)
+) | ![Quiz](![image](![image](https://github.com/user-attachments/assets/9226c2cd-966c-4a37-8af1-30615b1e47e9/300x200)
+)
+) | ![Leaderboard](![image](https://github.com/user-attachments/assets/abfdbb0e-c50a-4489-bfb4-21bd534e7a39)
+/300x200) |
 
 ### 🧾 About
 Made with ❤️ by Suryansh Rai
