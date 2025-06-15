@@ -2,7 +2,7 @@
 
 **QuizRush** is a responsive, interactive quiz application built with **React** and styled using **Tailwind CSS**. It allows users to test their knowledge across a variety of topics, view their scores, and compete on a leaderboard.
 
-![QuizRush Banner](![image](https://github.com/user-attachments/assets/4ffea605-e15c-4c19-a713-a1dc01422f60) 
+[![QuizRush Banner](https://github.com/user-attachments/assets/4ffea605-e15c-4c19-a713-a1dc01422f60)](https://github.com/user-attachments/assets/4ffea605-e15c-4c19-a713-a1dc01422f60)
 
 ---
 
