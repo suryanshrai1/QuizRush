@@ -6,6 +6,10 @@
 
 ---
 
+## Deployed Link(Live Trial)
+
+https://quiz-rush-gamma.vercel.app/
+
 ## 🚀 Features
 
 - ✅ Start quizzes by topic or randomly
