@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import Home from './Home';
-import Navbar from './Navbar';
+import Navbar from './NavBar';
 import Header from './Header';
 import Footer from './Footer';
 import QuizList from './QuizList';
